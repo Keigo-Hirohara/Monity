@@ -1,19 +1,21 @@
-import React from 'react';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Navbar from './components/Navbar';
-import Login from './components/login/Login';
-import Mypage from './components/mypage/Mypage';
-import Room from './components/room/Room';
+// import Navbar from './components/Navbar';
+import Login from "./components/login/Login";
+import Mypage from "./components/mypage/Mypage";
+import Room from "./components/room/Room";
 
 const App = () => {
-    return (
-        <BrowserRouter>
-            <Route path='/login' component={Login}/>
-            <Route path='/mypage' component={Route}/>
-            <Route path='/room' component={Room}/>
-        </BrowserRouter>
-    );
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" exact element={<Login/>}/>
+        <Route path="/mypage" exact element={<Mypage/>}/>
+        <Route path="/room" exact element={<Room/>}/>
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;

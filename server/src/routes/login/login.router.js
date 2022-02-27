@@ -3,7 +3,10 @@ const express = require('express');
 const loginRouter = express.Router();
 
 loginRouter.get('/', (req, res) => {
-    res.send('this is a login router');
+    res.json({
+        name: 'keigo',
+        password: '158281872keigo'
+    });
 })
 
 module.exports = loginRouter;
